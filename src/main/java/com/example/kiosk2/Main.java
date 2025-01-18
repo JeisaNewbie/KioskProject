@@ -18,17 +18,19 @@ public class Main {
         while(true) {
             System.out.println("[ SHAKESHACK MENU ]");
             printAll(menuItems);
-            input = Integer.parseInt(scanner.nextLine());
-
-            if (input == 0) {
-                System.out.println("프로그램을 종료합니다.");
-                return;
-            }
 
             try {
+                input = Integer.parseInt(scanner.nextLine());
+
+                if (input == 0) {
+                    System.out.println("프로그램을 종료합니다.");
+                    return;
+                }
+
                 print(menuItems.get(input - 1), input);
-            }
-            catch(IndexOutOfBoundsException e) {
+            } catch (NumberFormatException e) {
+                System.out.println("숫자를 입력하세요");
+            } catch (IndexOutOfBoundsException e) {
                 System.out.println("잘못된 번호 입니다.");
             }
         }
