@@ -45,6 +45,12 @@ public class Main {
     }
 
     public static void print(MenuItem menuItem, int i) {
-        System.out.printf("%d. %-14s| W %s | %s\n", i, menuItem.getName(), menuItem.getPrice(), menuItem.getDescription());
+        System.out.printf("""
+                        ==============================================================
+                        %d. %-14s| W %s | %s
+                        ==============================================================
+
+                        """
+                , i, menuItem.getName(), menuItem.getPrice(), menuItem.getDescription());
     }
 }
