@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Set;
 
 public class Menu {
-    private LinkedHashMap<String, List<MenuItem>> menu;
+    private final LinkedHashMap<String, List<MenuItem>> menu;
 
     public Menu() {
         menu = new LinkedHashMap<>();
