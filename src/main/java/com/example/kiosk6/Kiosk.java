@@ -5,11 +5,9 @@ import java.util.Scanner;
 
 public class Kiosk {
     private final Menu menu;
-//    private final Orders orders;
 
     public Kiosk(Menu menu) {
         this.menu = menu;
-//        this.orders = new Orders();
     }
 
     public void start() throws TerminateException {
